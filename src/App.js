@@ -3,16 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  generateBoard(gridSize) {
+    let columns = [...Array(gridSize)].map((column, index) => <div key={index} className={`column column-${index}`}></div>);
+    let grid = [...Array(gridSize)].map((row, index) => <div key={index} className={`row row-${index}`}>{columns}</div>);
+    return grid;
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="board">
+        {this.generateBoard(19)}
       </div>
     );
   }
