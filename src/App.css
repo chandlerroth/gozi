@@ -1,11 +1,24 @@
+.game {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .board {
-  padding: 5rem;
+  padding: 2rem;
+  background-color: burlywood;
+  max-width: fit-content;
+  align-self: center;
+  box-shadow: 0 0 48px rgba(0, 0, 0, 0.2);
 }
 
 .row {
   display: flex;
   justify-content: center;
   margin: 0 -1px;
+  max-width: fit-content;
+  margin: auto;
 }
 
 .column {

@@ -11,8 +11,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="board">
-        {this.generateBoard(19)}
+      <div className="game">
+        <div className="board">
+          {this.generateBoard(19)}
+        </div>
       </div>
     );
   }
